@@ -15,15 +15,14 @@
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4"
   },
-  
-"scripts": {
-  "start": "react-scripts start",
-  "build": "react-scripts build",
-  "test": "react-scripts test",
-  "eject": "react-scripts eject",
-  "predeploy": "npm run build",
-  "deploy": "gh-pages -d build"
-},
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
+  },
   "eslintConfig": {
     "extends": [
       "react-app",
@@ -45,6 +44,5 @@
   "devDependencies": {
     "gh-pages": "^6.3.0"
   },
-  "homepage": "https://your-github-username.github.io/your-repo-name"
- 
+  "homepage": "https://ShanmugasundaramRaja.github.io/german-quiz"
 }
