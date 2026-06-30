@@ -1,5 +1,6 @@
 import React, { useState, useMemo, useEffect, useRef } from "react";
 import Confetti from "react-confetti";
+import "./Germanquiz.css";
 
 import verbsData from "../data/verbs.json";
 import nounsData from "../data/nouns.json";
@@ -368,7 +369,7 @@ const Germanquiz = () => {
   const celebrate = totalQuestions > 0 && totalCorrect / totalQuestions >= 0.7;
 
   return (
-    <div className="container">
+    <div className="quiz=page">
       {showConfetti && typeof window !== "undefined" && (
         <Confetti
           width={window.innerWidth}

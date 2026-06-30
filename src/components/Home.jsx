@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import styles from "../components/Home.css";
+import "./Home.css";
 
 const PILLS = [
   {
@@ -8,6 +8,18 @@ const PILLS = [
     path: "/quiz",
     icon: "📝",
     desc: "Verbs, nouns, adjectives & adverbs",
+  },
+  {
+    label: "Articles",
+    path: "/articles",
+    icon: "👤",
+    desc: "Articles of all cases",
+  },
+  {
+    label: "Adverbs",
+    path: "/adverbs",
+    icon: "👤",
+    desc: "Adverbs of all types",
   },
   {
     label: "Sentence Structure",
@@ -22,10 +34,28 @@ const PILLS = [
     desc: "Personal, possessive & reflexive",
   },
   {
+    label: "Prepositions",
+    path: "/prepositions",
+    icon: "👤",
+    desc: "All cases and two way",
+  },
+  {
+    label: "Connectors",
+    path: "/connectors",
+    icon: "👤",
+    desc: "Conjunctions and connectors of all cases",
+  },
+  {
     label: "Tenses",
     path: "/tenses",
     icon: "⏱",
     desc: "Present, past, future & more",
+  },
+  {
+    label: "Questions",
+    path: "/frage",
+    icon: "❓",
+    desc: "All types of questions",
   },
   {
     label: "Modal Verbs",
@@ -34,8 +64,14 @@ const PILLS = [
     desc: "können, müssen, dürfen & more",
   },
   {
+    label: "Adjectives",
+    path: "/adjectives",
+    icon: "👤",
+    desc: "Adjectives of all types",
+  },
+  {
     label: "Regular vs Irregular",
-    path: "/verb-types",
+    path: "/regularIrregular",
     icon: "⚡",
     desc: "Conjugation patterns",
   },
@@ -52,10 +88,22 @@ const PILLS = [
     desc: "Pronunciation & speaking drills",
   },
   {
+    label: "Negation",
+    path: "/negation",
+    icon: "🚫",
+    desc: "All types of negation",
+  },
+  {
     label: "Scenario Simulation",
     path: "/scenarios",
     icon: "🎭",
     desc: "Real-life German conversations",
+  },
+  {
+    label: "Comparitive & Superlative",
+    path: "/compare",
+    icon: "💪🏼",
+    desc: "Comparisons and Superlations of all types",
   },
   {
     label: "Writing Practice",
@@ -68,6 +116,36 @@ const PILLS = [
     path: "/listening",
     icon: "🎧",
     desc: "Comprehension & dictation",
+  },
+  {
+    label: "Plural",
+    path: "/plural",
+    icon: "👥",
+    desc: "How to pluralise anything",
+  },
+  {
+    label: "Reflexive verbs",
+    path: "/reflexive",
+    icon: "🔁",
+    desc: "Use of reflexive verbs",
+  },
+  {
+    label: "Active and Passive",
+    path: "/active",
+    icon: "🔁",
+    desc: "Active and Passive voices in all cases",
+  },
+  {
+    label: "Direct and Indirect",
+    path: "/direct",
+    icon: "👉",
+    desc: "Direct and Indirect Speeches",
+  },
+  {
+    label: "Alphabets, Numbers and Greetings",
+    path: "/basics",
+    icon: "📌",
+    desc: "All the elementary basics",
   },
 ];
 
