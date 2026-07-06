@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/german-quiz/static/css/main.8fe2b653.css",
-    "main.js": "/german-quiz/static/js/main.7ef4f608.js",
+    "main.css": "/german-quiz/static/css/main.3fac3a61.css",
+    "main.js": "/german-quiz/static/js/main.1cd753e3.js",
     "index.html": "/german-quiz/index.html",
-    "main.8fe2b653.css.map": "/german-quiz/static/css/main.8fe2b653.css.map",
-    "main.7ef4f608.js.map": "/german-quiz/static/js/main.7ef4f608.js.map"
+    "main.3fac3a61.css.map": "/german-quiz/static/css/main.3fac3a61.css.map",
+    "main.1cd753e3.js.map": "/german-quiz/static/js/main.1cd753e3.js.map"
   },
   "entrypoints": [
-    "static/css/main.8fe2b653.css",
-    "static/js/main.7ef4f608.js"
+    "static/css/main.3fac3a61.css",
+    "static/js/main.1cd753e3.js"
   ]
 }
