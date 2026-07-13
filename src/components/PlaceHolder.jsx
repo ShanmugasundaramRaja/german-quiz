@@ -1,8 +1,7 @@
 import React from "react";
-import { useLocation, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 export default function PlaceholderPage({ title }) {
-  const location = useLocation();
   return (
     <div className="container">
       <div className="placeholder-page">

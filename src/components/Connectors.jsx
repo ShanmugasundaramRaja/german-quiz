@@ -1759,7 +1759,6 @@ function TensesSection() {
 }
 
 function ModalsSection() {
-  const [showExamples, setShowExamples] = useState(false);
   return (
     <div
       style={{

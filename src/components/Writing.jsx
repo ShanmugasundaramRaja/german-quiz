@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from "react";
+import React, { useState, useMemo, useCallback } from "react";
 
 /* ─── DATA ──────────────────────────────────────────────────────────────────── */
 
@@ -889,15 +889,19 @@ export default function Writing() {
     setRevealedMap((prev) => ({ ...prev, [key]: !prev[key] }));
   };
 
-  const progressFor = (levelKey, total) => {
-    let done = 0;
-    for (let i = 0; i < total; i++) if (revealedMap[`${levelKey}-${i}`]) done++;
-    return done;
-  };
+  const progressFor = useCallback(
+    (levelKey, total) => {
+      let done = 0;
+      for (let i = 0; i < total; i++)
+        if (revealedMap[`${levelKey}-${i}`]) done++;
+      return done;
+    },
+    [revealedMap],
+  );
 
   const currentDone = useMemo(
     () => progressFor(current.level, current.tasks.length),
-    [revealedMap, current],
+    [current, progressFor],
   );
 
   return (

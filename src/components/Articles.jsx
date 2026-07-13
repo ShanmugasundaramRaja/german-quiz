@@ -419,7 +419,6 @@ function ExamplesBlock({ examples }) {
 }
 
 function ArticleCard({ data, index }) {
-  const hasPlural = data.headers.includes("Plural");
   return (
     <div className="case-section" style={{ animationDelay: `${index * 80}ms` }}>
       <div className="case-header">

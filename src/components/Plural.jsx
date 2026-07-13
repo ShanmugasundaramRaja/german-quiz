@@ -18,7 +18,8 @@ const MASTER_PATTERNS = [
   },
   {
     pattern: "-e",
-    tendency: "Common with many masculine nouns, also some neuter and some feminine nouns",
+    tendency:
+      "Common with many masculine nouns, also some neuter and some feminine nouns",
     umlaut: true,
     examples: [
       "der Hund → die Hunde",
@@ -29,7 +30,8 @@ const MASTER_PATTERNS = [
   },
   {
     pattern: "-er",
-    tendency: "Especially common with some neuter nouns, also some masculine nouns",
+    tendency:
+      "Especially common with some neuter nouns, also some masculine nouns",
     umlaut: true,
     examples: [
       "das Kind → die Kinder",
@@ -40,7 +42,8 @@ const MASTER_PATTERNS = [
   },
   {
     pattern: "-s",
-    tendency: "Common with nouns ending in non-e vowels, many loanwords, abbreviations",
+    tendency:
+      "Common with nouns ending in non-e vowels, many loanwords, abbreviations",
     umlaut: false,
     examples: [
       "das Auto → die Autos",
@@ -75,8 +78,10 @@ const GENDER_RULES = [
       ["die Mannschaft", "die Mannschaften"],
       ["die Identität", "die Identitäten"],
     ],
-    exceptions: "die Hand → die Hände · die Maus → die Mäuse · die Tochter → die Töchter",
-    exceptionNote: "Important feminine exceptions with Umlaut and non-(e)n patterns",
+    exceptions:
+      "die Hand → die Hände · die Maus → die Mäuse · die Tochter → die Töchter",
+    exceptionNote:
+      "Important feminine exceptions with Umlaut and non-(e)n patterns",
   },
   {
     gender: "Masculine",
@@ -162,7 +167,8 @@ const DATIVE_PLURAL = {
     ["die Autos", "mit den Autos", "Ends in -s → no -n added"],
     ["die Frauen", "mit den Frauen", "Already ends in -n → no change"],
   ],
-  proTip: "Learn three items together: singular · nominative plural · dative plural phrase.",
+  proTip:
+    "Learn three items together: singular · nominative plural · dative plural phrase.",
 };
 
 const SPECIAL_CASES = [
@@ -170,7 +176,10 @@ const SPECIAL_CASES = [
     type: "Dual plural forms",
     note: "Some nouns have more than one plural form, sometimes with different meanings or nuances.",
     examples: [
-      ["das Wort", "die Wörter (individual words) / die Worte (words in context, sayings)"],
+      [
+        "das Wort",
+        "die Wörter (individual words) / die Worte (words in context, sayings)",
+      ],
     ],
     color: "gen",
   },
@@ -199,8 +208,18 @@ const LEARNING_SYSTEM = {
   format: "article + singular + plural + example phrase",
   example: [
     ["der Hund", "die Hunde", "Ich sehe die Hunde.", "Dative: mit den Hunden."],
-    ["die Frau", "die Frauen", "Die Frauen arbeiten.", "Dative: mit den Frauen."],
-    ["das Kind", "die Kinder", "Die Kinder spielen.", "Dative: mit den Kindern."],
+    [
+      "die Frau",
+      "die Frauen",
+      "Die Frauen arbeiten.",
+      "Dative: mit den Frauen.",
+    ],
+    [
+      "das Kind",
+      "die Kinder",
+      "Die Kinder spielen.",
+      "Dative: mit den Kindern.",
+    ],
   ],
 };
 
@@ -228,46 +247,107 @@ const TABS = [
 ───────────────────────────────────────────── */
 
 const COLOR = {
-  nom: { badge: "case-badge-nom", border: "case-nom", tag: "case-tag-nom", label: "NOM" },
-  acc: { badge: "case-badge-acc", border: "case-acc", tag: "case-tag-acc", label: "ACC" },
-  dat: { badge: "case-badge-dat", border: "case-dat", tag: "case-tag-dat", label: "DAT" },
-  gen: { badge: "case-badge-gen", border: "case-gen", tag: "case-tag-gen", label: "GEN" },
+  nom: {
+    badge: "case-badge-nom",
+    border: "case-nom",
+    tag: "case-tag-nom",
+    label: "NOM",
+  },
+  acc: {
+    badge: "case-badge-acc",
+    border: "case-acc",
+    tag: "case-tag-acc",
+    label: "ACC",
+  },
+  dat: {
+    badge: "case-badge-dat",
+    border: "case-dat",
+    tag: "case-tag-dat",
+    label: "DAT",
+  },
+  gen: {
+    badge: "case-badge-gen",
+    border: "case-gen",
+    tag: "case-tag-gen",
+    label: "GEN",
+  },
 };
 
 function CaseBadge({ color, label }) {
-  return <span className={`case-badge ${COLOR[color].badge}`}>{label || COLOR[color].label}</span>;
+  return (
+    <span className={`case-badge ${COLOR[color].badge}`}>
+      {label || COLOR[color].label}
+    </span>
+  );
 }
 
 function SectionCard({ color = "nom", children }) {
-  return <div className={`case-section ${COLOR[color].border}`}>{children}</div>;
+  return (
+    <div className={`case-section ${COLOR[color].border}`}>{children}</div>
+  );
 }
 
 function Tag({ text, color }) {
   const colors = {
-    nom: { bg: "var(--color-primary-highlight)", color: "var(--color-primary)" },
+    nom: {
+      bg: "var(--color-primary-highlight)",
+      color: "var(--color-primary)",
+    },
     acc: { bg: "var(--color-gold-highlight)", color: "var(--color-gold)" },
-    dat: { bg: "var(--color-success-highlight)", color: "var(--color-success)" },
+    dat: {
+      bg: "var(--color-success-highlight)",
+      color: "var(--color-success)",
+    },
     gen: { bg: "var(--color-error-highlight)", color: "var(--color-error)" },
     info: { bg: "var(--color-surface-2)", color: "var(--color-text-muted)" },
   };
   const c = colors[color] || colors.info;
   return (
-    <span style={{
-      display: "inline-block", padding: "2px 10px", borderRadius: "var(--radius-full)",
-      background: c.bg, color: c.color, fontWeight: 700, fontSize: "var(--text-xs)",
-      letterSpacing: "0.05em", textTransform: "uppercase",
-    }}>{text}</span>
+    <span
+      style={{
+        display: "inline-block",
+        padding: "2px 10px",
+        borderRadius: "var(--radius-full)",
+        background: c.bg,
+        color: c.color,
+        fontWeight: 700,
+        fontSize: "var(--text-xs)",
+        letterSpacing: "0.05em",
+        textTransform: "uppercase",
+      }}
+    >
+      {text}
+    </span>
   );
 }
 
 function GrammarTable({ headers, rows }) {
   return (
     <div className="boss-table-wrap" style={{ overflowX: "auto" }}>
-      <table style={{ width: "100%", borderCollapse: "collapse", fontSize: "var(--text-sm)" }}>
+      <table
+        style={{
+          width: "100%",
+          borderCollapse: "collapse",
+          fontSize: "var(--text-sm)",
+        }}
+      >
         <thead>
           <tr style={{ borderBottom: "2px solid var(--color-border)" }}>
             {headers.map((h, i) => (
-              <th key={i} style={{ padding: "var(--space-2) var(--space-3)", textAlign: "left", fontWeight: 700, fontSize: "var(--text-xs)", letterSpacing: "0.07em", textTransform: "uppercase", color: "var(--color-text-muted)", background: "var(--color-surface-2)", whiteSpace: "nowrap" }}>
+              <th
+                key={i}
+                style={{
+                  padding: "var(--space-2) var(--space-3)",
+                  textAlign: "left",
+                  fontWeight: 700,
+                  fontSize: "var(--text-xs)",
+                  letterSpacing: "0.07em",
+                  textTransform: "uppercase",
+                  color: "var(--color-text-muted)",
+                  background: "var(--color-surface-2)",
+                  whiteSpace: "nowrap",
+                }}
+              >
                 {h}
               </th>
             ))}
@@ -275,9 +355,23 @@ function GrammarTable({ headers, rows }) {
         </thead>
         <tbody>
           {rows.map((row, ri) => (
-            <tr key={ri} style={{ borderBottom: "1px solid var(--color-divider)", background: ri % 2 === 0 ? "transparent" : "var(--color-surface-2)" }}>
+            <tr
+              key={ri}
+              style={{
+                borderBottom: "1px solid var(--color-divider)",
+                background:
+                  ri % 2 === 0 ? "transparent" : "var(--color-surface-2)",
+              }}
+            >
               {row.map((cell, ci) => (
-                <td key={ci} style={{ padding: "var(--space-2) var(--space-3)", verticalAlign: "top", color: "var(--color-text)" }}>
+                <td
+                  key={ci}
+                  style={{
+                    padding: "var(--space-2) var(--space-3)",
+                    verticalAlign: "top",
+                    color: "var(--color-text)",
+                  }}
+                >
                   {cell}
                 </td>
               ))}
@@ -292,23 +386,33 @@ function GrammarTable({ headers, rows }) {
 function Collapsible({ label, children, defaultOpen = false }) {
   const [open, setOpen] = useState(defaultOpen);
   return (
-    <div style={{ display: "flex", flexDirection: "column", gap: "var(--space-2)" }}>
+    <div
+      style={{
+        display: "flex",
+        flexDirection: "column",
+        gap: "var(--space-2)",
+      }}
+    >
       <button className="examples-toggle" onClick={() => setOpen(!open)}>
-        <span style={{ display: "inline-block", transform: open ? "rotate(0deg)" : "rotate(-90deg)", transition: "transform 180ms ease" }}>▾</span>
+        <span
+          style={{
+            display: "inline-block",
+            transform: open ? "rotate(0deg)" : "rotate(-90deg)",
+            transition: "transform 180ms ease",
+          }}
+        >
+          ▾
+        </span>
         {label}
       </button>
-      {open && <div style={{ animation: "fade-up 280ms cubic-bezier(0.16,1,0.3,1) both" }}>{children}</div>}
+      {open && (
+        <div
+          style={{ animation: "fade-up 280ms cubic-bezier(0.16,1,0.3,1) both" }}
+        >
+          {children}
+        </div>
+      )}
     </div>
-  );
-}
-
-function ArrowPair({ singular, plural }) {
-  return (
-    <span style={{ display: "inline-flex", alignItems: "center", gap: "var(--space-2)", flexWrap: "wrap" }}>
-      <strong>{singular}</strong>
-      <span style={{ color: "var(--color-text-muted)" }}>→</span>
-      <strong style={{ color: "var(--color-primary)" }}>{plural}</strong>
-    </span>
   );
 }
 
@@ -320,18 +424,55 @@ function PatternsTab() {
   return (
     <div className="pronouns-sections">
       <SectionCard color="nom">
-        <div className="case-header-left" style={{ display: "flex", gap: "var(--space-3)", alignItems: "center" }}>
+        <div
+          className="case-header-left"
+          style={{
+            display: "flex",
+            gap: "var(--space-3)",
+            alignItems: "center",
+          }}
+        >
           <CaseBadge color="nom" label="KEY" />
           <div>
             <div className="case-title">Always die in Nominative Plural</div>
-            <div className="case-sublabel">Regardless of original gender — der, die, das all become die in the plural</div>
+            <div className="case-sublabel">
+              Regardless of original gender — der, die, das all become die in
+              the plural
+            </div>
           </div>
         </div>
-        <div style={{ display: "flex", flexWrap: "wrap", gap: "var(--space-3)", padding: "var(--space-3)", background: "var(--color-surface-2)", borderRadius: "var(--radius-lg)", border: "1px solid var(--color-divider)" }}>
+        <div
+          style={{
+            display: "flex",
+            flexWrap: "wrap",
+            gap: "var(--space-3)",
+            padding: "var(--space-3)",
+            background: "var(--color-surface-2)",
+            borderRadius: "var(--radius-lg)",
+            border: "1px solid var(--color-divider)",
+          }}
+        >
           {ARTICLE_RULE.examples.map((ex, i) => (
-            <div key={i} style={{ display: "flex", flexDirection: "column", gap: 2, padding: "var(--space-2) var(--space-3)", background: "var(--color-surface)", borderRadius: "var(--radius-md)", border: "1px solid var(--color-divider)", minWidth: 160 }}>
+            <div
+              key={i}
+              style={{
+                display: "flex",
+                flexDirection: "column",
+                gap: 2,
+                padding: "var(--space-2) var(--space-3)",
+                background: "var(--color-surface)",
+                borderRadius: "var(--radius-md)",
+                border: "1px solid var(--color-divider)",
+                minWidth: 160,
+              }}
+            >
               <Tag text={ex[1]} color={["acc", "nom", "dat"][i]} />
-              <div className="example-de" style={{ marginTop: "var(--space-1)" }}>{ex[0]}</div>
+              <div
+                className="example-de"
+                style={{ marginTop: "var(--space-1)" }}
+              >
+                {ex[0]}
+              </div>
             </div>
           ))}
         </div>
@@ -339,25 +480,68 @@ function PatternsTab() {
 
       <GrammarTable
         headers={["Pattern", "Umlaut?", "Typical Tendency", "Examples"]}
-        rows={MASTER_PATTERNS.map(p => [
+        rows={MASTER_PATTERNS.map((p) => [
           <Tag text={p.pattern} color={p.color} />,
-          <span style={{ color: p.umlaut ? "var(--color-success)" : "var(--color-text-muted)", fontWeight: 700 }}>{p.umlaut ? "Often yes" : "No"}</span>,
-          <span style={{ fontSize: "var(--text-xs)", color: "var(--color-text-muted)" }}>{p.tendency}</span>,
-          <div style={{ display: "flex", flexDirection: "column", gap: "var(--space-1)" }}>
-            {p.examples.map((ex, i) => <div key={i} className="example-de" style={{ fontSize: "var(--text-xs)" }}>{ex}</div>)}
+          <span
+            style={{
+              color: p.umlaut
+                ? "var(--color-success)"
+                : "var(--color-text-muted)",
+              fontWeight: 700,
+            }}
+          >
+            {p.umlaut ? "Often yes" : "No"}
+          </span>,
+          <span
+            style={{
+              fontSize: "var(--text-xs)",
+              color: "var(--color-text-muted)",
+            }}
+          >
+            {p.tendency}
+          </span>,
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              gap: "var(--space-1)",
+            }}
+          >
+            {p.examples.map((ex, i) => (
+              <div
+                key={i}
+                className="example-de"
+                style={{ fontSize: "var(--text-xs)" }}
+              >
+                {ex}
+              </div>
+            ))}
           </div>,
         ])}
       />
 
-      <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", gap: "var(--space-3)" }}>
+      <div
+        style={{
+          display: "grid",
+          gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))",
+          gap: "var(--space-3)",
+        }}
+      >
         {MASTER_PATTERNS.map((p, i) => (
           <SectionCard key={i} color={p.color}>
             <div className="case-header">
               <div className="case-header-left">
                 <CaseBadge color={p.color} label={p.pattern} />
                 <div>
-                  <div className="case-title" style={{ fontSize: "var(--text-base)" }}>{p.tendency.split(",")[0]}</div>
-                  {p.umlaut && <div className="case-sublabel">May add Umlaut</div>}
+                  <div
+                    className="case-title"
+                    style={{ fontSize: "var(--text-base)" }}
+                  >
+                    {p.tendency.split(",")[0]}
+                  </div>
+                  {p.umlaut && (
+                    <div className="case-sublabel">May add Umlaut</div>
+                  )}
                 </div>
               </div>
             </div>
@@ -378,8 +562,20 @@ function PatternsTab() {
 function GenderTab() {
   return (
     <div className="pronouns-sections">
-      <div style={{ padding: "var(--space-4)", background: "var(--color-primary-highlight)", border: "1px solid var(--color-primary)", borderRadius: "var(--radius-xl)", fontSize: "var(--text-sm)", color: "var(--color-primary)", fontWeight: 600 }}>
-        💡 If you want the highest-value shortcut, start with <strong>feminine nouns</strong>. They very often form the plural with -(e)n.
+      <div
+        style={{
+          padding: "var(--space-4)",
+          background: "var(--color-primary-highlight)",
+          border: "1px solid var(--color-primary)",
+          borderRadius: "var(--radius-xl)",
+          fontSize: "var(--text-sm)",
+          color: "var(--color-primary)",
+          fontWeight: 600,
+        }}
+      >
+        💡 If you want the highest-value shortcut, start with{" "}
+        <strong>feminine nouns</strong>. They very often form the plural with
+        -(e)n.
       </div>
 
       {GENDER_RULES.map((g, i) => (
@@ -396,50 +592,145 @@ function GenderTab() {
 
           {g.suffixes && (
             <div>
-              <div style={{ fontSize: "var(--text-xs)", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.07em", color: "var(--color-text-muted)", marginBottom: "var(--space-1)" }}>
+              <div
+                style={{
+                  fontSize: "var(--text-xs)",
+                  fontWeight: 700,
+                  textTransform: "uppercase",
+                  letterSpacing: "0.07em",
+                  color: "var(--color-text-muted)",
+                  marginBottom: "var(--space-1)",
+                }}
+              >
                 Common suffixes → -(e)n
               </div>
               <div className="prep-chips">
-                {g.suffixes.map((s, j) => <span key={j} className="prep-chip">{s}</span>)}
+                {g.suffixes.map((s, j) => (
+                  <span key={j} className="prep-chip">
+                    {s}
+                  </span>
+                ))}
               </div>
             </div>
           )}
 
           <GrammarTable
             headers={["Singular", "Plural"]}
-            rows={g.examples.map(ex => [ex[0], <strong style={{ color: "var(--color-primary)" }}>{ex[1]}</strong>])}
+            rows={g.examples.map((ex) => [
+              ex[0],
+              <strong style={{ color: "var(--color-primary)" }}>
+                {ex[1]}
+              </strong>,
+            ])}
           />
 
           {g.exceptions && (
-            <div style={{ padding: "var(--space-3)", background: "var(--color-error-highlight)", borderRadius: "var(--radius-lg)", border: "1px solid var(--color-error)" }}>
-              <div style={{ fontSize: "var(--text-xs)", fontWeight: 700, color: "var(--color-error)", marginBottom: "var(--space-1)" }}>Exceptions</div>
-              <div className="example-de" style={{ fontSize: "var(--text-xs)" }}>{g.exceptions}</div>
-              {g.exceptionNote && <div className="example-en">{g.exceptionNote}</div>}
+            <div
+              style={{
+                padding: "var(--space-3)",
+                background: "var(--color-error-highlight)",
+                borderRadius: "var(--radius-lg)",
+                border: "1px solid var(--color-error)",
+              }}
+            >
+              <div
+                style={{
+                  fontSize: "var(--text-xs)",
+                  fontWeight: 700,
+                  color: "var(--color-error)",
+                  marginBottom: "var(--space-1)",
+                }}
+              >
+                Exceptions
+              </div>
+              <div
+                className="example-de"
+                style={{ fontSize: "var(--text-xs)" }}
+              >
+                {g.exceptions}
+              </div>
+              {g.exceptionNote && (
+                <div className="example-en">{g.exceptionNote}</div>
+              )}
             </div>
           )}
         </SectionCard>
       ))}
 
       <SectionCard color="nom">
-        <div className="case-header-left" style={{ display: "flex", gap: "var(--space-3)", alignItems: "center" }}>
+        <div
+          className="case-header-left"
+          style={{
+            display: "flex",
+            gap: "var(--space-3)",
+            alignItems: "center",
+          }}
+        >
           <CaseBadge color="nom" label="FEM" />
           <div>
             <div className="case-title">Feminine -e / -el / -er → add -n</div>
-            <div className="case-sublabel">A second strong feminine tendency</div>
+            <div className="case-sublabel">
+              A second strong feminine tendency
+            </div>
           </div>
         </div>
         <GrammarTable
           headers={["Singular", "Plural", "Rule"]}
-          rows={FEMININE_EN_PATTERNS.map(row => [row[0], <strong style={{ color: "var(--color-primary)" }}>{row[1]}</strong>, <span style={{ fontSize: "var(--text-xs)", color: "var(--color-text-muted)", fontStyle: "italic" }}>{row[2]}</span>])}
+          rows={FEMININE_EN_PATTERNS.map((row) => [
+            row[0],
+            <strong style={{ color: "var(--color-primary)" }}>{row[1]}</strong>,
+            <span
+              style={{
+                fontSize: "var(--text-xs)",
+                color: "var(--color-text-muted)",
+                fontStyle: "italic",
+              }}
+            >
+              {row[2]}
+            </span>,
+          ])}
         />
       </SectionCard>
 
       <Collapsible label="High-value rules summary" defaultOpen={true}>
-        <div style={{ display: "flex", flexDirection: "column", gap: "var(--space-2)" }}>
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            gap: "var(--space-2)",
+          }}
+        >
           {HIGH_VALUE_RULES.map((rule, i) => (
-            <div key={i} style={{ display: "flex", gap: "var(--space-3)", padding: "var(--space-3) var(--space-4)", background: "var(--color-surface-2)", border: "1px solid var(--color-border)", borderRadius: "var(--radius-lg)" }}>
-              <span style={{ fontWeight: 800, color: "var(--color-primary)", flexShrink: 0 }}>{i + 1}.</span>
-              <p style={{ margin: 0, fontSize: "var(--text-sm)", color: "var(--color-text)", lineHeight: 1.6 }}>{rule}</p>
+            <div
+              key={i}
+              style={{
+                display: "flex",
+                gap: "var(--space-3)",
+                padding: "var(--space-3) var(--space-4)",
+                background: "var(--color-surface-2)",
+                border: "1px solid var(--color-border)",
+                borderRadius: "var(--radius-lg)",
+              }}
+            >
+              <span
+                style={{
+                  fontWeight: 800,
+                  color: "var(--color-primary)",
+                  flexShrink: 0,
+                }}
+              >
+                {i + 1}.
+              </span>
+              <p
+                style={{
+                  margin: 0,
+                  fontSize: "var(--text-sm)",
+                  color: "var(--color-text)",
+                  lineHeight: 1.6,
+                }}
+              >
+                {rule}
+              </p>
             </div>
           ))}
         </div>
@@ -451,50 +742,162 @@ function GenderTab() {
 function UmlautTab() {
   return (
     <div className="pronouns-sections">
-      <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))", gap: "var(--space-3)" }}>
+      <div
+        style={{
+          display: "grid",
+          gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))",
+          gap: "var(--space-3)",
+        }}
+      >
         {UMLAUT_LOGIC.map((item, i) => (
           <SectionCard key={i} color={item.color}>
-            <div className="case-header-left" style={{ display: "flex", gap: "var(--space-3)", alignItems: "center" }}>
+            <div
+              className="case-header-left"
+              style={{
+                display: "flex",
+                gap: "var(--space-3)",
+                alignItems: "center",
+              }}
+            >
               <CaseBadge color={item.color} label={`${i + 1}`} />
             </div>
-            <p style={{ margin: 0, fontSize: "var(--text-sm)", color: "var(--color-text)", lineHeight: 1.6 }}>{item.rule}</p>
+            <p
+              style={{
+                margin: 0,
+                fontSize: "var(--text-sm)",
+                color: "var(--color-text)",
+                lineHeight: 1.6,
+              }}
+            >
+              {item.rule}
+            </p>
           </SectionCard>
         ))}
       </div>
 
       <SectionCard color="dat">
-        <div className="case-header-left" style={{ display: "flex", gap: "var(--space-3)", alignItems: "center" }}>
+        <div
+          className="case-header-left"
+          style={{
+            display: "flex",
+            gap: "var(--space-3)",
+            alignItems: "center",
+          }}
+        >
           <CaseBadge color="dat" label="UML" />
           <div>
             <div className="case-title">Umlaut Shifts</div>
             <div className="case-sublabel">Only a → ä · o → ö · u → ü</div>
           </div>
         </div>
-        <div style={{ display: "flex", gap: "var(--space-2)", flexWrap: "wrap", padding: "var(--space-3)", background: "var(--color-surface-2)", borderRadius: "var(--radius-lg)", border: "1px solid var(--color-divider)" }}>
-          {[["a", "ä"], ["o", "ö"], ["u", "ü"]].map((pair, i) => (
-            <div key={i} style={{ display: "flex", alignItems: "center", gap: "var(--space-2)", padding: "var(--space-2) var(--space-4)", background: "var(--color-surface)", borderRadius: "var(--radius-lg)", border: "1px solid var(--color-border)" }}>
-              <span style={{ fontSize: "1.4rem", fontFamily: "var(--font-display)", fontWeight: 800, color: "var(--color-text-muted)" }}>{pair[0]}</span>
+        <div
+          style={{
+            display: "flex",
+            gap: "var(--space-2)",
+            flexWrap: "wrap",
+            padding: "var(--space-3)",
+            background: "var(--color-surface-2)",
+            borderRadius: "var(--radius-lg)",
+            border: "1px solid var(--color-divider)",
+          }}
+        >
+          {[
+            ["a", "ä"],
+            ["o", "ö"],
+            ["u", "ü"],
+          ].map((pair, i) => (
+            <div
+              key={i}
+              style={{
+                display: "flex",
+                alignItems: "center",
+                gap: "var(--space-2)",
+                padding: "var(--space-2) var(--space-4)",
+                background: "var(--color-surface)",
+                borderRadius: "var(--radius-lg)",
+                border: "1px solid var(--color-border)",
+              }}
+            >
+              <span
+                style={{
+                  fontSize: "1.4rem",
+                  fontFamily: "var(--font-display)",
+                  fontWeight: 800,
+                  color: "var(--color-text-muted)",
+                }}
+              >
+                {pair[0]}
+              </span>
               <span style={{ color: "var(--color-text-muted)" }}>→</span>
-              <span style={{ fontSize: "1.4rem", fontFamily: "var(--font-display)", fontWeight: 800, color: "var(--color-primary)" }}>{pair[1]}</span>
+              <span
+                style={{
+                  fontSize: "1.4rem",
+                  fontFamily: "var(--font-display)",
+                  fontWeight: 800,
+                  color: "var(--color-primary)",
+                }}
+              >
+                {pair[1]}
+              </span>
             </div>
           ))}
         </div>
       </SectionCard>
 
       <SectionCard color="acc">
-        <div className="case-header-left" style={{ display: "flex", gap: "var(--space-3)", alignItems: "center" }}>
+        <div
+          className="case-header-left"
+          style={{
+            display: "flex",
+            gap: "var(--space-3)",
+            alignItems: "center",
+          }}
+        >
           <CaseBadge color="acc" label="EX" />
           <div>
             <div className="case-title">High-Frequency Examples</div>
-            <div className="case-sublabel">Learn these cold — they appear constantly</div>
+            <div className="case-sublabel">
+              Learn these cold — they appear constantly
+            </div>
           </div>
         </div>
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(160px, 1fr))", gap: "var(--space-2)" }}>
+        <div
+          style={{
+            display: "grid",
+            gridTemplateColumns: "repeat(auto-fit, minmax(160px, 1fr))",
+            gap: "var(--space-2)",
+          }}
+        >
           {UMLAUT_EXAMPLES.map((ex, i) => (
-            <div key={i} style={{ padding: "var(--space-3)", background: "var(--color-surface-2)", borderRadius: "var(--radius-lg)", border: "1px solid var(--color-divider)", textAlign: "center" }}>
+            <div
+              key={i}
+              style={{
+                padding: "var(--space-3)",
+                background: "var(--color-surface-2)",
+                borderRadius: "var(--radius-lg)",
+                border: "1px solid var(--color-divider)",
+                textAlign: "center",
+              }}
+            >
               <div className="example-de">{ex[0]}</div>
-              <div style={{ color: "var(--color-text-muted)", fontSize: "var(--text-xs)", margin: "2px 0" }}>→</div>
-              <div style={{ fontWeight: 800, color: "var(--color-primary)", fontSize: "var(--text-base)" }}>{ex[1]}</div>
+              <div
+                style={{
+                  color: "var(--color-text-muted)",
+                  fontSize: "var(--text-xs)",
+                  margin: "2px 0",
+                }}
+              >
+                →
+              </div>
+              <div
+                style={{
+                  fontWeight: 800,
+                  color: "var(--color-primary)",
+                  fontSize: "var(--text-base)",
+                }}
+              >
+                {ex[1]}
+              </div>
             </div>
           ))}
         </div>
@@ -506,12 +909,31 @@ function UmlautTab() {
 function DativeTab() {
   return (
     <div className="pronouns-sections">
-      <div style={{ padding: "var(--space-4)", background: "var(--color-gold-highlight)", border: "1px solid var(--color-gold)", borderRadius: "var(--radius-xl)", fontSize: "var(--text-sm)", color: "var(--color-gold)", fontWeight: 600 }}>
-        💡 <strong>Dative plural</strong> is one of the highest-value follow-up rules. Many learners memorize plural only in nominative and then produce wrong case forms later.
+      <div
+        style={{
+          padding: "var(--space-4)",
+          background: "var(--color-gold-highlight)",
+          border: "1px solid var(--color-gold)",
+          borderRadius: "var(--radius-xl)",
+          fontSize: "var(--text-sm)",
+          color: "var(--color-gold)",
+          fontWeight: 600,
+        }}
+      >
+        💡 <strong>Dative plural</strong> is one of the highest-value follow-up
+        rules. Many learners memorize plural only in nominative and then produce
+        wrong case forms later.
       </div>
 
       <SectionCard color="dat">
-        <div className="case-header-left" style={{ display: "flex", gap: "var(--space-3)", alignItems: "center" }}>
+        <div
+          className="case-header-left"
+          style={{
+            display: "flex",
+            gap: "var(--space-3)",
+            alignItems: "center",
+          }}
+        >
           <CaseBadge color="dat" label="DAT" />
           <div>
             <div className="case-title">Dative Plural Rule</div>
@@ -520,15 +942,26 @@ function DativeTab() {
         </div>
         <GrammarTable
           headers={["Plural (Nom)", "Dative Form", "Note"]}
-          rows={DATIVE_PLURAL.examples.map(row => [
+          rows={DATIVE_PLURAL.examples.map((row) => [
             row[0],
             <strong style={{ color: "var(--color-success)" }}>{row[1]}</strong>,
-            <span style={{ fontSize: "var(--text-xs)", color: "var(--color-text-muted)", fontStyle: "italic" }}>{row[2]}</span>,
+            <span
+              style={{
+                fontSize: "var(--text-xs)",
+                color: "var(--color-text-muted)",
+                fontStyle: "italic",
+              }}
+            >
+              {row[2]}
+            </span>,
           ])}
         />
         <div className="mental-model">
           <div className="mental-model-title">Pro Tip</div>
-          <ul className="mental-steps" style={{ listStyle: "none", padding: 0, margin: 0 }}>
+          <ul
+            className="mental-steps"
+            style={{ listStyle: "none", padding: 0, margin: 0 }}
+          >
             <li>{DATIVE_PLURAL.proTip}</li>
           </ul>
         </div>
@@ -542,7 +975,14 @@ function SpecialTab() {
     <div className="pronouns-sections">
       {SPECIAL_CASES.map((item, i) => (
         <SectionCard key={i} color={item.color}>
-          <div className="case-header-left" style={{ display: "flex", gap: "var(--space-3)", alignItems: "center" }}>
+          <div
+            className="case-header-left"
+            style={{
+              display: "flex",
+              gap: "var(--space-3)",
+              alignItems: "center",
+            }}
+          >
             <CaseBadge color={item.color} label={i === 0 ? "2×" : "PL"} />
             <div>
               <div className="case-title">{item.type}</div>
@@ -567,7 +1007,14 @@ function SystemTab() {
   return (
     <div className="pronouns-sections">
       <SectionCard color="nom">
-        <div className="case-header-left" style={{ display: "flex", gap: "var(--space-3)", alignItems: "center" }}>
+        <div
+          className="case-header-left"
+          style={{
+            display: "flex",
+            gap: "var(--space-3)",
+            alignItems: "center",
+          }}
+        >
           <CaseBadge color="nom" label="FMT" />
           <div>
             <div className="case-title">Best Learning Format</div>
@@ -575,52 +1022,142 @@ function SystemTab() {
           </div>
         </div>
         <GrammarTable
-          headers={["Article + Singular", "Plural", "Example Phrase", "Dative Example"]}
-          rows={LEARNING_SYSTEM.example.map(row => [
+          headers={[
+            "Article + Singular",
+            "Plural",
+            "Example Phrase",
+            "Dative Example",
+          ]}
+          rows={LEARNING_SYSTEM.example.map((row) => [
             <strong>{row[0]}</strong>,
             <strong style={{ color: "var(--color-primary)" }}>{row[1]}</strong>,
             row[2],
-            <span style={{ fontSize: "var(--text-xs)", color: "var(--color-text-muted)", fontStyle: "italic" }}>{row[3]}</span>,
+            <span
+              style={{
+                fontSize: "var(--text-xs)",
+                color: "var(--color-text-muted)",
+                fontStyle: "italic",
+              }}
+            >
+              {row[3]}
+            </span>,
           ])}
         />
       </SectionCard>
 
       <SectionCard color="dat">
-        <div className="case-header-left" style={{ display: "flex", gap: "var(--space-3)", alignItems: "center" }}>
+        <div
+          className="case-header-left"
+          style={{
+            display: "flex",
+            gap: "var(--space-3)",
+            alignItems: "center",
+          }}
+        >
           <CaseBadge color="dat" label="PRO" />
           <div>
             <div className="case-title">Pro Notes</div>
-            <div className="case-sublabel">Most efficient strategy for lasting accuracy</div>
+            <div className="case-sublabel">
+              Most efficient strategy for lasting accuracy
+            </div>
           </div>
         </div>
-        <div style={{ display: "flex", flexDirection: "column", gap: "var(--space-2)" }}>
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            gap: "var(--space-2)",
+          }}
+        >
           {PRO_NOTES.map((note, i) => (
-            <div key={i} style={{ display: "flex", gap: "var(--space-3)", padding: "var(--space-3) var(--space-4)", background: "var(--color-surface-2)", border: "1px solid var(--color-border)", borderRadius: "var(--radius-lg)" }}>
-              <span style={{ fontWeight: 800, color: "var(--color-success)", flexShrink: 0 }}>✓</span>
-              <p style={{ margin: 0, fontSize: "var(--text-sm)", color: "var(--color-text)", lineHeight: 1.6 }}>{note}</p>
+            <div
+              key={i}
+              style={{
+                display: "flex",
+                gap: "var(--space-3)",
+                padding: "var(--space-3) var(--space-4)",
+                background: "var(--color-surface-2)",
+                border: "1px solid var(--color-border)",
+                borderRadius: "var(--radius-lg)",
+              }}
+            >
+              <span
+                style={{
+                  fontWeight: 800,
+                  color: "var(--color-success)",
+                  flexShrink: 0,
+                }}
+              >
+                ✓
+              </span>
+              <p
+                style={{
+                  margin: 0,
+                  fontSize: "var(--text-sm)",
+                  color: "var(--color-text)",
+                  lineHeight: 1.6,
+                }}
+              >
+                {note}
+              </p>
             </div>
           ))}
         </div>
       </SectionCard>
 
       <SectionCard color="acc">
-        <div className="case-header-left" style={{ display: "flex", gap: "var(--space-3)", alignItems: "center" }}>
+        <div
+          className="case-header-left"
+          style={{
+            display: "flex",
+            gap: "var(--space-3)",
+            alignItems: "center",
+          }}
+        >
           <CaseBadge color="acc" label="MAP" />
           <div>
             <div className="case-title">Master Decision Map</div>
-            <div className="case-sublabel">Classify by gender and shape first, then ending</div>
+            <div className="case-sublabel">
+              Classify by gender and shape first, then ending
+            </div>
           </div>
         </div>
         <div className="mental-model">
           <div className="mental-model-title">Quick logic flow</div>
-          <ul className="mental-steps" style={{ listStyle: "none", padding: 0, margin: 0 }}>
-            <li><span className="case-tag-nom">Feminine</span> → try <strong>-(e)n</strong> first; check for Umlaut exceptions</li>
-            <li><span className="case-tag-acc">Masculine one-syllable</span> → try <strong>-e</strong>, often with Umlaut</li>
-            <li><span className="case-tag-acc">Masculine with -ant/-ent/-ist</span> → <strong>-en</strong></li>
-            <li><span className="case-tag-dat">Neuter with -chen/-lein</span> → <strong>Ø (no change)</strong></li>
-            <li><span className="case-tag-dat">Neuter one-syllable</span> → often <strong>-er</strong>, sometimes Umlaut</li>
-            <li><span className="case-tag-gen">Loanword ending in vowel</span> → <strong>-s</strong></li>
-            <li>Dative plural → add <strong>-n</strong> unless plural already ends in -n or -s</li>
+          <ul
+            className="mental-steps"
+            style={{ listStyle: "none", padding: 0, margin: 0 }}
+          >
+            <li>
+              <span className="case-tag-nom">Feminine</span> → try{" "}
+              <strong>-(e)n</strong> first; check for Umlaut exceptions
+            </li>
+            <li>
+              <span className="case-tag-acc">Masculine one-syllable</span> → try{" "}
+              <strong>-e</strong>, often with Umlaut
+            </li>
+            <li>
+              <span className="case-tag-acc">
+                Masculine with -ant/-ent/-ist
+              </span>{" "}
+              → <strong>-en</strong>
+            </li>
+            <li>
+              <span className="case-tag-dat">Neuter with -chen/-lein</span> →{" "}
+              <strong>Ø (no change)</strong>
+            </li>
+            <li>
+              <span className="case-tag-dat">Neuter one-syllable</span> → often{" "}
+              <strong>-er</strong>, sometimes Umlaut
+            </li>
+            <li>
+              <span className="case-tag-gen">Loanword ending in vowel</span> →{" "}
+              <strong>-s</strong>
+            </li>
+            <li>
+              Dative plural → add <strong>-n</strong> unless plural already ends
+              in -n or -s
+            </li>
           </ul>
         </div>
       </SectionCard>
@@ -637,41 +1174,96 @@ export default function Plurals() {
 
   const renderTab = () => {
     switch (activeTab) {
-      case "patterns": return <PatternsTab />;
-      case "gender":   return <GenderTab />;
-      case "umlaut":   return <UmlautTab />;
-      case "dative":   return <DativeTab />;
-      case "special":  return <SpecialTab />;
-      case "system":   return <SystemTab />;
-      default:         return null;
+      case "patterns":
+        return <PatternsTab />;
+      case "gender":
+        return <GenderTab />;
+      case "umlaut":
+        return <UmlautTab />;
+      case "dative":
+        return <DativeTab />;
+      case "special":
+        return <SpecialTab />;
+      case "system":
+        return <SystemTab />;
+      default:
+        return null;
     }
   };
 
   return (
     <div className="pronouns-page">
-      <div style={{ display: "flex", flexDirection: "column", gap: "var(--space-2)", marginBottom: "var(--space-6)" }}>
-        <div style={{ display: "flex", alignItems: "center", gap: "var(--space-3)" }}>
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          gap: "var(--space-2)",
+          marginBottom: "var(--space-6)",
+        }}
+      >
+        <div
+          style={{
+            display: "flex",
+            alignItems: "center",
+            gap: "var(--space-3)",
+          }}
+        >
           <span style={{ fontSize: "2rem" }}>📦</span>
           <div>
-            <h1 style={{ fontFamily: "var(--font-display)", fontSize: "var(--text-2xl)", color: "var(--color-text)", margin: 0, lineHeight: 1.1 }}>German Plurals</h1>
-            <p style={{ fontSize: "var(--text-sm)", color: "var(--color-text-muted)", margin: 0 }}>
+            <h1
+              style={{
+                fontFamily: "var(--font-display)",
+                fontSize: "var(--text-2xl)",
+                color: "var(--color-text)",
+                margin: 0,
+                lineHeight: 1.1,
+              }}
+            >
+              German Plurals
+            </h1>
+            <p
+              style={{
+                fontSize: "var(--text-sm)",
+                color: "var(--color-text-muted)",
+                margin: 0,
+              }}
+            >
               -(e)n · -e · -er · -s · Ø · Umlaut · dative · special cases
             </p>
           </div>
         </div>
       </div>
 
-      <div style={{ display: "flex", flexWrap: "wrap", gap: "var(--space-1)", padding: "var(--space-1)", background: "var(--color-surface-2)", borderRadius: "var(--radius-xl)", border: "1px solid var(--color-border)", marginBottom: "var(--space-6)" }}>
-        {TABS.map(tab => (
+      <div
+        style={{
+          display: "flex",
+          flexWrap: "wrap",
+          gap: "var(--space-1)",
+          padding: "var(--space-1)",
+          background: "var(--color-surface-2)",
+          borderRadius: "var(--radius-xl)",
+          border: "1px solid var(--color-border)",
+          marginBottom: "var(--space-6)",
+        }}
+      >
+        {TABS.map((tab) => (
           <button
             key={tab.id}
             onClick={() => setActiveTab(tab.id)}
             style={{
-              display: "flex", alignItems: "center", gap: "var(--space-2)",
-              padding: "var(--space-2) var(--space-4)", borderRadius: "var(--radius-lg)",
-              border: "none", cursor: "pointer", fontSize: "var(--text-xs)", fontWeight: 700,
-              letterSpacing: "0.04em", transition: "all 150ms ease",
-              background: activeTab === tab.id ? "var(--color-primary)" : "transparent",
+              display: "flex",
+              alignItems: "center",
+              gap: "var(--space-2)",
+              padding: "var(--space-2) var(--space-4)",
+              borderRadius: "var(--radius-lg)",
+              border: "none",
+              cursor: "pointer",
+              fontSize: "var(--text-xs)",
+              fontWeight: 700,
+              letterSpacing: "0.04em",
+              transition: "all 150ms ease",
+              background:
+                activeTab === tab.id ? "var(--color-primary)" : "transparent",
               color: activeTab === tab.id ? "#fff" : "var(--color-text-muted)",
               boxShadow: activeTab === tab.id ? "var(--shadow-sm)" : "none",
             }}
@@ -682,7 +1274,10 @@ export default function Plurals() {
         ))}
       </div>
 
-      <div className="pronouns-sections" style={{ animation: "fade-up 280ms cubic-bezier(0.16,1,0.3,1) both" }}>
+      <div
+        className="pronouns-sections"
+        style={{ animation: "fade-up 280ms cubic-bezier(0.16,1,0.3,1) both" }}
+      >
         {renderTab()}
       </div>
     </div>

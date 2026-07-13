@@ -479,19 +479,6 @@ const C = {
 };
 
 // Section accent colors for each page section
-const SECTION_COLORS = {
-  overview: "primary",
-  prefixes: "gold",
-  splitting: "success",
-  partizip: "error",
-  ambiguous: "gold",
-  tenses: "primary",
-  modals: "success",
-  combos: "error",
-  diagnose: "primary",
-  mistakes: "error",
-  formula: "success",
-};
 
 // ─── SHARED COMPONENTS ────────────────────────────────────────────────────────
 
@@ -1588,7 +1575,6 @@ function PartizipSection() {
 }
 
 function AmbiguousSection() {
-  const [open, setOpen] = useState(0);
   return (
     <div
       style={{
@@ -2749,7 +2735,6 @@ function FormulaSection() {
 
 export default function SeparableVerbs() {
   const [activeId, setActiveId] = useState("overview");
-  const active = SECTIONS.find((s) => s.id === activeId);
 
   const renderSection = () => {
     switch (activeId) {

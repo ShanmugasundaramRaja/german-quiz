@@ -739,38 +739,6 @@ function Table({ headers, rows }) {
   );
 }
 
-function ExamplesToggle({ examples }) {
-  const [open, setOpen] = useState(false);
-  return (
-    <div
-      style={{
-        display: "flex",
-        flexDirection: "column",
-        gap: "var(--space-2)",
-      }}
-    >
-      <button className="examples-toggle" onClick={() => setOpen((o) => !o)}>
-        <span>{open ? "▲" : "▼"}</span>
-        {open ? "Hide examples" : "Show examples"}
-      </button>
-      {open && (
-        <div className="examples-list">
-          {examples.map((ex, i) => (
-            <div
-              key={i}
-              className="example-row"
-              style={{ animationDelay: `${i * 40}ms` }}
-            >
-              <span className="example-de">{ex.de}</span>
-              {ex.en && <span className="example-en">{ex.en}</span>}
-            </div>
-          ))}
-        </div>
-      )}
-    </div>
-  );
-}
-
 // ─── TABS ─────────────────────────────────────────────────────────────────────
 
 const TABS = [
