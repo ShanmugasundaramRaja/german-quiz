@@ -25,6 +25,7 @@ import Reflexive from "./components/Reflexive.jsx";
 import ActivePassive from "./components/ActivePassive.jsx";
 import DirectIndirect from "./components/DirectIndirect.jsx";
 import Basics from "./components/Basics.jsx";
+import Writing from "./components/Writing.jsx";
 // Stub imports — replace each with the real component as you build it
 
 
@@ -34,7 +35,7 @@ import Basics from "./components/Basics.jsx";
 
 const SpeechPractice    = () => <PlaceholderPage title="Speech Practice" />;
 const ScenarioSim       = () => <PlaceholderPage title="Scenario Simulation" />;
-const WritingPractice   = () => <PlaceholderPage title="Writing Practice" />;
+
 const ListeningPractice = () => <PlaceholderPage title="Listening Practice" />;
 
 
@@ -60,7 +61,7 @@ export default function App() {
         <Route path="/separable-verbs"    element={<SeparableVerbs />} />
         <Route path="/speech"             element={<SpeechPractice />} />
         <Route path="/scenarios"          element={<ScenarioSim />} />
-        <Route path="/writing"            element={<WritingPractice />} />
+  
         <Route path="/listening"          element={<ListeningPractice />} />
          <Route path="/prepositions"          element={<GermanPrepositionsExplorer />} />
          <Route path="/plural" element={<Plural/>}/>
@@ -68,6 +69,7 @@ export default function App() {
             <Route path="/active" element={<ActivePassive/>}/>
             <Route path="/direct" element={<DirectIndirect/>}/>
              <Route path="/basics" element={<Basics/>}/>
+              <Route path="/writing" element={<Writing/>}/>
       </Routes>
     </HashRouter>
   );
