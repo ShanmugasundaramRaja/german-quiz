@@ -49,7 +49,9 @@ const Germanquiz = () => {
       case "nouns":
         return nounsData;
       case "adverbs":
-        return adverbsData;
+        // adverbs.json is now grouped by category (temporal/lokal/modal/kausal);
+        // flatten it into a single ordered array like the other tabs expect.
+        return Object.values(adverbsData).flat();
       case "adjectives":
         return adjectivesData;
       default:
@@ -535,6 +537,7 @@ const Germanquiz = () => {
                 <th className="td-index">#</th>
                 <th id="headerLeft">{leftHeader}</th>
                 <th id="headerRight">{rightHeader}</th>
+                {activeTab === "adverbs" && <th className="td-type">Type</th>}
               </tr>
             </thead>
             <tbody id="verbTable">
@@ -585,13 +588,22 @@ const Germanquiz = () => {
                         <span className="answer-blank" />
                       )}
                     </td>
+                    {activeTab === "adverbs" && (
+                      <td className="td-type">
+                        {item.type && (
+                          <span className={`type-badge type-${item.type}`}>
+                            {item.type}
+                          </span>
+                        )}
+                      </td>
+                    )}
                   </tr>
                 );
               })}
               {pageItems.length === 0 && (
                 <tr>
                   <td
-                    colSpan={3}
+                    colSpan={activeTab === "adverbs" ? 4 : 3}
                     style={{ textAlign: "center", padding: "1rem" }}
                   >
                     No items on this page.
