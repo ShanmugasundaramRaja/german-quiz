@@ -1,0 +1,754 @@
+[
+  {
+    "id": "a2-message-001",
+    "type": "bullet_points",
+    "level": "A2",
+    "category": "short_message",
+    "instructions": "Du kannst heute nicht kommen. Schreibe eine Nachricht an einen Freund.",
+    "bulletPoints": [
+      "Erkläre, warum du heute nicht kommen kannst.",
+      "Sag, ob ihr euch später treffen könnt.",
+      "Schreibe eine freundliche Verabschiedung."
+    ],
+    "minWords": 30,
+    "maxWords": 50,
+    "targetLanguage": ["heute", "leider", "später"],
+    "rubric": {
+      "criteria": [
+        "Task completion (alle Bulletpoints erwähnt).",
+        "Grammatik und Wortstellung.",
+        "Passende Wortwahl und Ton.",
+        "Text ist gut lesbar und zusammenhängend."
+      ]
+    },
+    "modelAnswer": "Hallo Amir, ich kann heute leider nicht kommen. Ich habe noch viel Arbeit. Vielleicht sehen wir uns später am Abend. Viele Grüße, Lina"
+  },
+
+  {
+    "id": "b1-opinion-001",
+    "type": "word_count",
+    "level": "B1",
+    "category": "opinion_paragraph",
+    "instructions": "Schreibe 80–100 Wörter zum Thema: „Lernen zu Hause oder in der Bibliothek?\"",
+    "minWords": 80,
+    "maxWords": 100,
+    "targetLanguage": ["ruhig", "lieber", "deshalb", "trotzdem", "produktiv"],
+    "rubric": {
+      "criteria": [
+        "Aufbau: klare Einleitung, Hauptteil, Schluss.",
+        "Begründete Meinung (mindestens 2 Gründe).",
+        "Korrekte Grammatik und passende Verbindungswörter.",
+        "Wortzahl im vorgegebenen Bereich."
+      ]
+    },
+    "modelAnswer": "Ich lerne lieber zu Hause, weil es dort ruhiger ist. Ich kann meinen Tag besser planen und oft konzentrierter arbeiten. Manchmal gehe ich trotzdem in die Bibliothek, besonders wenn ich lange lesen oder schreiben muss. Dort ist die Atmosphäre sehr produktiv. Zu Hause bin ich flexibler, deshalb ist es für mich im Alltag praktischer."
+  },
+
+  {
+    "id": "b1-letter-reply-001",
+    "type": "letter_reply",
+    "level": "B1",
+    "category": "email_response",
+    "incomingText": "Hallo, du hast einen Termin bei der Sprachschule am Freitag um 15 Uhr. Bitte bestätige, ob du kommen kannst und ob du besondere Fragen oder Wünsche hast.",
+    "instructions": "Antworte in einer E-Mail (60–80 Wörter).",
+    "bulletPoints": [
+      "Bestätige, ob du am Freitag kommen kannst.",
+      "Erkläre kurz, was du im Kurs brauchst oder erwartest.",
+      "Bedanke dich und signiere mit deinem Namen."
+    ],
+    "minWords": 60,
+    "maxWords": 80,
+    "targetLanguage": ["vielen Dank", "Termin", "Fragen", "Kurs"],
+    "rubric": {
+      "criteria": [
+        "Alle Punkte des Schreibanlasses beantwortet.",
+        "Passende Höflichkeitsformeln (Anrede, Gruß).",
+        "Angemessene Register (semi-formell).",
+        "Grammatik und Orthografie überwiegend korrekt."
+      ]
+    },
+    "modelAnswer": "Sehr geehrte Damen und Herren, vielen Dank für Ihre Nachricht zum Termin am Freitag. Ich kann um 15 Uhr kommen und freue mich auf den Kurs. Besonders wichtig für mich sind Schreiben und Wortschatz. Ich möchte auch mehr über Prüfungen erfahren. Vielen Dank und viele Grüße, Anna"
+  },
+
+  {
+    "id": "a1-mcq-adverbs-001",
+    "type": "mcq",
+    "level": "A1",
+    "category": "adverb_choice",
+    "instructions": "Wähle das passende Wort.",
+    "questions": [
+      {
+        "prompt": "Ich bin ___ müde.",
+        "options": ["heute", "dort", "sehr"],
+        "correctIndex": 2,
+        "explanation": "„sehr müde“ ist eine typische Kombination."
+      },
+      {
+        "prompt": "Wir spielen ___ im Park.",
+        "options": ["gern", "morgen", "hier"],
+        "correctIndex": 2,
+        "explanation": "„hier im Park“ passt am besten."
+      },
+      {
+        "prompt": "Er fährt ___ Fahrrad.",
+        "options": ["schnell", "heute", "dort"],
+        "correctIndex": 0,
+        "explanation": "„schnell Fahrrad fahren“ ist natürlich."
+      }
+    ]
+  },
+
+  {
+    "id": "a1-message-001",
+    "type": "bullet_points",
+    "level": "A1",
+    "category": "short_message",
+    "instructions": "Dein Freund hat heute Geburtstag. Schreibe eine kurze Nachricht.",
+    "bulletPoints": [
+      "Gratulieren zum Geburtstag.",
+      "Sagen, ob du heute Zeit hast.",
+      "Einen einfachen Wunsch oder Plan nennen."
+    ],
+    "minWords": 20,
+    "maxWords": 35,
+    "targetLanguage": ["heute", "gern", "später"],
+    "rubric": {
+      "criteria": [
+        "Alle drei Punkte sind genannt.",
+        "Einfache, verständliche Sätze.",
+        "Passende, freundliche Tonlage."
+      ]
+    },
+    "modelAnswer": "Hallo Jonas, alles Gute zum Geburtstag! Ich habe heute leider wenig Zeit, aber später rufe ich dich gern an."
+  },
+
+  {
+    "id": "a2-routine-001",
+    "type": "bullet_points",
+    "level": "A2",
+    "category": "daily_routine",
+    "instructions": "Schreibe über deinen Morgen.",
+    "bulletPoints": [
+      "Wann stehst du auf?",
+      "Was machst du direkt danach?",
+      "Was machst du vor der Arbeit oder vor dem Kurs?"
+    ],
+    "minWords": 30,
+    "maxWords": 50,
+    "targetLanguage": ["morgens", "dann", "oft"],
+    "rubric": {
+      "criteria": [
+        "Fragen klar beantwortet.",
+        "Natürliche Reihenfolge (Zeitlogik).",
+        "Adverbien passend verwendet."
+      ]
+    },
+    "modelAnswer": "Morgens stehe ich um sieben Uhr auf. Dann trinke ich Kaffee und frühstücke. Vor dem Kurs lese ich oft noch kurz die Nachrichten."
+  },
+
+  {
+    "id": "b1-problem-001",
+    "type": "bullet_points",
+    "level": "B1",
+    "category": "problem_message",
+    "instructions": "Du kommst zu spät zu einem Termin bei der Sprachschule. Schreibe eine Nachricht.",
+    "bulletPoints": [
+      "Entschuldige dich für die Verspätung.",
+      "Erkläre kurz den Grund.",
+      "Gib an, wann du ungefähr kommst."
+    ],
+    "minWords": 50,
+    "maxWords": 70,
+    "targetLanguage": ["leider", "deshalb", "trotzdem"],
+    "rubric": {
+      "criteria": [
+        "Alle Punkte erfüllt.",
+        "Höflicher, respektvoller Ton.",
+        "Klarer Zeitbezug und Lösungsvorschlag."
+      ]
+    },
+    "modelAnswer": "Guten Tag, es tut mir leid, aber ich komme heute etwas später. Mein Bus hat leider Verspätung, deshalb bin ich wahrscheinlich erst um 15:20 Uhr da."
+  },
+
+  {
+    "id": "b2-complaint-001",
+    "type": "bullet_points",
+    "level": "B2",
+    "category": "formal_complaint",
+    "instructions": "Du bist mit einem Sprachkurs unzufrieden. Schreibe eine formelle Beschwerde.",
+    "bulletPoints": [
+      "Beschreibe mindestens zwei konkrete Probleme.",
+      "Erkläre, warum das für dich ein Problem ist.",
+      "Formuliere, welche Lösung du dir wünschst."
+    ],
+    "minWords": 120,
+    "maxWords": 160,
+    "targetLanguage": ["einerseits", "andererseits", "außerdem", "folglich"],
+    "rubric": {
+      "criteria": [
+        "Struktur: Einleitung, Problemdarstellung, Lösungsvorschlag.",
+        "Angemessene formelle Höflichkeitsformeln.",
+        "Kohärente Argumentation mit Verbindungswörtern."
+      ]
+    },
+    "modelAnswer": "Sehr geehrte Damen und Herren, ich besuche seit Anfang Mai Ihren Abendkurs und möchte mich über mehrere Punkte beschweren. In den letzten Wochen begann der Unterricht wiederholt verspätet, außerdem fielen zwei Stunden kurzfristig aus. Ich bitte Sie daher um eine klare Information zum weiteren Plan sowie um eine angemessene Lösung. Mit freundlichen Grüßen, Daniel Weber"
+  },
+
+  {
+    "id": "a2-hobby-001",
+    "type": "word_count",
+    "level": "A2",
+    "category": "personal_text",
+    "instructions": "Schreibe 40–60 Wörter über dein Lieblingshobby.",
+    "minWords": 40,
+    "maxWords": 60,
+    "targetLanguage": ["gern", "oft", "manchmal", "am Wochenende"],
+    "rubric": {
+      "criteria": [
+        "Hobby klar beschrieben.",
+        "Mindestens zwei Beispiele oder Situationen.",
+        "Einfache, richtige Zeitformen (Präsens).",
+        "Wortzahl eingehalten."
+      ]
+    },
+    "modelAnswer": "Mein Lieblingshobby ist Wandern. Am Wochenende gehe ich oft in die Berge. Manchmal wandere ich allein, manchmal mit Freunden, weil ich die Ruhe und die Natur besonders gern mag."
+  },
+
+  {
+    "id": "b1-experience-001",
+    "type": "word_count",
+    "level": "B1",
+    "category": "narrative",
+    "instructions": "Schreibe 90–110 Wörter über einen Tag, an dem etwas anders als geplant war.",
+    "minWords": 90,
+    "maxWords": 110,
+    "targetLanguage": ["zuerst", "dann", "plötzlich", "trotzdem", "später"],
+    "rubric": {
+      "criteria": [
+        "Klarer zeitlicher Ablauf.",
+        "Mindestens ein unerwartetes Ereignis beschrieben.",
+        "Passende Verbindungswörter für die Geschichte.",
+        "Wortzahl im vorgegebenen Rahmen."
+      ]
+    },
+    "modelAnswer": "Zuerst wollte ich früh lernen, dann hatte ich plötzlich einen wichtigen Anruf. Danach war es schon spät, trotzdem habe ich versucht, ruhig zu bleiben. Später konnte ich doch noch konzentriert arbeiten."
+  },
+
+  {
+    "id": "b2-argument-001",
+    "type": "word_count",
+    "level": "B2",
+    "category": "balanced_argument",
+    "instructions": "Schreibe 150–180 Wörter zum Thema: „Ist Online-Lernen genauso gut wie Präsenzunterricht?“",
+    "minWords": 150,
+    "maxWords": 180,
+    "targetLanguage": ["einerseits", "andererseits", "dennoch", "außerdem", "abschließend"],
+    "rubric": {
+      "criteria": [
+        "Beide Seiten (Vorteile/Nachteile) klar dargestellt.",
+        "Eigene Position deutlich formuliert.",
+        "Präzise Verbindungswörter zur Strukturierung.",
+        "Angemessenes Register und komplexere Satzstrukturen."
+      ]
+    },
+    "modelAnswer": "Einerseits bietet Online-Lernen große Flexibilität und spart oft Zeit, andererseits fehlt häufig der direkte Kontakt zu Lehrern und anderen Teilnehmern. Außerdem entstehen zu Hause leichter Ablenkungen. Dennoch kann Online-Unterricht sehr effektiv sein, wenn er gut organisiert ist und klare Ziele hat. Abschließend finde ich eine Mischung aus Präsenz- und Online-Lernen am sinnvollsten."
+  },
+
+  {
+    "id": "a2-invite-reply-001",
+    "type": "letter_reply",
+    "level": "A2",
+    "category": "informal_invitation",
+    "incomingText": "Hallo, wir treffen uns morgen um 18 Uhr im Café „Zeit“. Hast du Zeit und möchtest du kommen?",
+    "instructions": "Antworte in einer Nachricht (35–50 Wörter).",
+    "bulletPoints": [
+      "Sag, ob du kommen kannst.",
+      "Schreib, wann du kommst oder warum es nicht geht.",
+      "Mach einen kurzen Kommentar zum Treffen (Freude, Bedauern)."
+    ],
+    "minWords": 35,
+    "maxWords": 50,
+    "targetLanguage": ["morgen", "leider", "gern", "später"],
+    "rubric": {
+      "criteria": [
+        "Alle Fragen aus der Nachricht beantwortet.",
+        "Natürliche, alltägliche Sprache.",
+        "Passender, freundlicher Ton."
+      ]
+    },
+    "modelAnswer": "Hallo, ich komme morgen gern ins Café „Zeit“. Ich bin wahrscheinlich um 18 Uhr da und freue mich auf das Treffen."
+  },
+
+  {
+    "id": "b1-course-email-001",
+    "type": "letter_reply",
+    "level": "B1",
+    "category": "semi_formal_email",
+    "incomingText": "Sehr geehrte Teilnehmerin, sehr geehrter Teilnehmer, am kommenden Montag beginnt Ihr neuer Deutschkurs. Bitte teilen Sie uns mit, ob Sie besondere Ziele oder Themen haben.",
+    "instructions": "Antworte in einer E-Mail (80–100 Wörter).",
+    "bulletPoints": [
+      "Bedanke dich für die Information.",
+      "Nenne mindestens zwei Lernziele oder Themen.",
+      "Frag kurz nach einem organisatorischen Punkt (z.B. Uhrzeit oder Raum)."
+    ],
+    "minWords": 80,
+    "maxWords": 100,
+    "targetLanguage": ["vielen Dank", "Kurs", "Ziel", "Thema"],
+    "rubric": {
+      "criteria": [
+        "Höfliche E-Mail-Struktur (Anrede/Schlussformel).",
+        "Konkrete und realistische Lernziele beschrieben.",
+        "Klarer Nachfragesatz zum Kursablauf."
+      ]
+    },
+    "modelAnswer": "Sehr geehrte Damen und Herren, vielen Dank für Ihre Nachricht zum neuen Deutschkurs am Montag. Mein Ziel ist es, besser schreiben zu können und meinen Wortschatz zu erweitern. Besonders interessieren mich Alltagssprache und Prüfungsvorbereitung. Könnten Sie mir bitte noch mitteilen, um wie viel Uhr der Kurs genau beginnt und in welchem Raum er stattfindet? Vielen Dank und viele Grüße, Maria"
+  },
+
+  {
+    "id": "b2-workplace-email-001",
+    "type": "letter_reply",
+    "level": "B2",
+    "category": "workplace_update",
+    "incomingText": "Ihre Teamleiterin bittet Sie per E-Mail, den aktuellen Stand Ihres Projekts zu beschreiben und mögliche Risiken zu nennen.",
+    "instructions": "Schreiben Sie eine formelle E-Mail (130–160 Wörter).",
+    "bulletPoints": [
+      "Beschreiben Sie kurz den aktuellen Projektstand.",
+      "Nennen Sie mindestens zwei Risiken oder Herausforderungen.",
+      "Schlagen Sie konkrete nächste Schritte oder Lösungen vor."
+    ],
+    "minWords": 130,
+    "maxWords": 160,
+    "targetLanguage": ["inzwischen", "voraussichtlich", "Risiko", "Maßnahme", "folglich"],
+    "rubric": {
+      "criteria": [
+        "Sachliche, strukturierte Darstellung.",
+        "Klarer Bezug zu Risiken und Lösungen.",
+        "Professioneller, formeller Stil."
+      ]
+    },
+    "modelAnswer": "Sehr geehrte Frau Müller, inzwischen haben wir die erste Phase des Projekts abgeschlossen und liegen insgesamt im Zeitplan. Allerdings sehen wir zwei Risiken: Zum einen ist die Abhängigkeit von einem externen Dienstleister hoch, zum anderen könnte es Verzögerungen bei der Datenfreigabe geben. Voraussichtlich können wir diese Punkte durch frühere Abstimmungen und zusätzliche Testläufe reduzieren. Folglich schlagen wir vor, nächste Woche ein kurzes Meeting zur Risikoanalyse zu planen. Mit freundlichen Grüßen, Max Schneider"
+  },
+
+  {
+    "id": "a1-mcq-time-001",
+    "type": "mcq",
+    "level": "A1",
+    "category": "temporal_adverbs",
+    "instructions": "Wähle das passende Zeitwort.",
+    "questions": [
+      {
+        "prompt": "Ich gehe ___ ins Kino.",
+        "options": ["morgen", "dort", "gern"],
+        "correctIndex": 0,
+        "explanation": "„morgen“ passt zur Zeitangabe."
+      },
+      {
+        "prompt": "Wir lernen ___ Deutsch.",
+        "options": ["heute", "langsam", "draußen"],
+        "correctIndex": 0,
+        "explanation": "„heute Deutsch lernen“ ist eine typische Formulierung."
+      }
+    ]
+  },
+
+  {
+    "id": "a2-mcq-order-001",
+    "type": "mcq",
+    "level": "A2",
+    "category": "word_order",
+    "instructions": "Wähle den Satz mit natürlicher Wortstellung.",
+    "questions": [
+      {
+        "prompt": "Welcher Satz ist richtig?",
+        "options": [
+          "Heute ich arbeite zu Hause.",
+          "Heute arbeite ich zu Hause.",
+          "Ich heute arbeite zu Hause."
+        ],
+        "correctIndex": 1,
+        "explanation": "Verb steht an zweiter Position im Satz: „Heute arbeite ich…“."
+      },
+      {
+        "prompt": "Welcher Satz klingt natürlich?",
+        "options": [
+          "Ich lerne ruhig abends.",
+          "Ich ruhig lerne abends.",
+          "Abends ich lerne ruhig."
+        ],
+        "correctIndex": 0,
+        "explanation": "Subjekt–Verb–Rest ist hier die natürliche Reihenfolge."
+      }
+    ]
+  },
+
+  {
+    "id": "b1-mcq-register-001",
+    "type": "mcq",
+    "level": "B1",
+    "category": "register_choice",
+    "instructions": "Wähle die passende Form für eine E-Mail an eine Lehrerin.",
+    "questions": [
+      {
+        "prompt": "Wie beginnst du die E-Mail?",
+        "options": [
+          "Hallo Sabine,",
+          "Liebe Frau Müller,",
+          "Ey Frau,",
+          "Hi Müller,"
+        ],
+        "correctIndex": 1,
+        "explanation": "„Liebe Frau Müller,“ ist höflich und passend für B1."
+      },
+      {
+        "prompt": "Wie beendest du die E-Mail?",
+        "options": [
+          "Viele Grüße,",
+          "LG,",
+          "Ciao,",
+          "Bis dann,"
+        ],
+        "correctIndex": 0,
+        "explanation": "„Viele Grüße,“ ist eine neutrale, höfliche Schlussformel."
+      }
+    ]
+  },
+
+  {
+    "id": "a1-message-002",
+    "type": "bullet_points",
+    "level": "A1",
+    "category": "short_message",
+    "instructions": "Deine Freundin fragt, ob du heute Abend Zeit hast. Schreibe eine kurze Antwort.",
+    "bulletPoints": [
+      "Sag, ob du heute Abend Zeit hast.",
+      "Sag, was du machst (Kurs, Arbeit, Treffen).",
+      "Mach einen einfachen Vorschlag für später oder ein anderes Datum."
+    ],
+    "minWords": 20,
+    "maxWords": 35,
+    "targetLanguage": ["heute", "abends", "später"],
+    "rubric": {
+      "criteria": [
+        "Alle drei Punkte erwähnt.",
+        "Einfache, korrekte Sätze.",
+        "Freundlicher, klarer Ton."
+      ]
+    },
+    "modelAnswer": "Hallo, heute Abend habe ich leider keinen Zeit, ich arbeite noch. Vielleicht können wir uns am Wochenende später treffen."
+  },
+
+  {
+    "id": "a1-message-003",
+    "type": "bullet_points",
+    "level": "A1",
+    "category": "short_message",
+    "instructions": "Dein Lehrer fragt, ob du morgen zum Kurs kommst. Schreibe eine Nachricht.",
+    "bulletPoints": [
+      "Bestätige, ob du kommst.",
+      "Sag kurz, wann du da bist.",
+      "Bedanke dich am Ende."
+    ],
+    "minWords": 20,
+    "maxWords": 35,
+    "targetLanguage": ["morgen", "pünktlich", "vielen Dank"],
+    "rubric": {
+      "criteria": [
+        "Fragen klar beantwortet.",
+        "Einfache Zeitangaben.",
+        "Höfliche Formulierungen."
+      ]
+    },
+    "modelAnswer": "Hallo, ich komme morgen zum Kurs und bin pünktlich um 9 Uhr da. Vielen Dank für die Nachricht!"
+  },
+
+  {
+    "id": "a2-routine-002",
+    "type": "bullet_points",
+    "level": "A2",
+    "category": "daily_routine",
+    "instructions": "Beschreibe deinen typischen Abend zu Hause.",
+    "bulletPoints": [
+      "Wann kommst du nach Hause?",
+      "Was machst du normalerweise zuerst?",
+      "Was machst du später am Abend?"
+    ],
+    "minWords": 30,
+    "maxWords": 50,
+    "targetLanguage": ["abends", "zuerst", "später", "oft"],
+    "rubric": {
+      "criteria": [
+        "Logische Reihenfolge der Aktivitäten.",
+        "Passende Adverbien zur Zeitbeschreibung.",
+        "Verständlicher, zusammenhängender Text."
+      ]
+    },
+    "modelAnswer": "Abends komme ich meistens um 18 Uhr nach Hause. Zuerst koche ich etwas und esse mit meiner Familie. Später schaue ich oft eine Serie oder lerne noch ein bisschen Deutsch."
+  },
+
+  {
+    "id": "b1-problem-002",
+    "type": "bullet_points",
+    "level": "B1",
+    "category": "problem_message",
+    "instructions": "Du hast eine wichtige Präsentation und dein Laptop funktioniert nicht. Schreibe deinem Kollegen eine Nachricht.",
+    "bulletPoints": [
+      "Erkläre kurz das Problem.",
+      "Sag, warum das heute schwierig ist.",
+      "Bitte um konkrete Hilfe oder eine Lösung."
+    ],
+    "minWords": 50,
+    "maxWords": 70,
+    "targetLanguage": ["heute", "dringend", "deshalb", "trotzdem"],
+    "rubric": {
+      "criteria": [
+        "Problem klar beschrieben.",
+        "Dringlichkeit verständlich vermittelt.",
+        "Konkrete Bitte um Unterstützung."
+      ]
+    },
+    "modelAnswer": "Hallo, mein Laptop funktioniert heute plötzlich nicht mehr und ich kann die Präsentation nicht öffnen. Das ist dringend, weil wir gleich das Meeting haben. Könntest du mir bitte kurz helfen oder deine Datei schicken, damit ich trotzdem präsentieren kann?"
+  },
+
+  {
+    "id": "b2-complaint-002",
+    "type": "bullet_points",
+    "level": "B2",
+    "category": "formal_complaint",
+    "instructions": "Du hast ein Online-Sprachpaket gekauft, aber der Zugang funktioniert nicht richtig. Schreibe eine formelle E-Mail an den Support.",
+    "bulletPoints": [
+      "Beschreibe mindestens zwei konkrete technische Probleme.",
+      "Erkläre, wie sich das auf dein Lernen auswirkt.",
+      "Bitte um eine klare Lösung oder Erstattung."
+    ],
+    "minWords": 130,
+    "maxWords": 170,
+    "targetLanguage": ["einerseits", "andererseits", "dennoch", "außerdem", "folglich"],
+    "rubric": {
+      "criteria": [
+        "Formelle Anrede und Abschluss.",
+        "Strukturierte Darstellung der Probleme.",
+        "Sachliche, klare Forderung."
+      ]
+    },
+    "modelAnswer": "Sehr geehrte Damen und Herren, ich habe vor zwei Wochen Ihr Online-Sprachpaket gekauft, jedoch funktioniert der Zugang nicht zuverlässig. Einerseits kann ich mich oft gar nicht einloggen, andererseits brechen die Übungen regelmäßig ab. Außerdem werden meine Fortschritte im System nicht gespeichert. Folglich ist ein regelmäßiges Lernen kaum möglich. Ich bitte Sie daher um eine schnelle Lösung des Problems oder um eine teilweise Erstattung der Kosten. Mit freundlichen Grüßen, ..."
+  },
+
+  {
+    "id": "a2-hobby-002",
+    "type": "word_count",
+    "level": "A2",
+    "category": "personal_text",
+    "instructions": "Schreibe 40–60 Wörter über deinen Lieblingsort in der Stadt.",
+    "minWords": 40,
+    "maxWords": 60,
+    "targetLanguage": ["gern", "oft", "draußen", "am Wochenende"],
+    "rubric": {
+      "criteria": [
+        "Ort klar beschrieben.",
+        "Mindestens zwei typische Aktivitäten genannt.",
+        "Einfache, korrekte Sätze.",
+        "Wortzahl eingehalten."
+      ]
+    },
+    "modelAnswer": "Mein Lieblingsort in der Stadt ist der große Park. Am Wochenende gehe ich dort oft spazieren und sitze draußen auf einer Bank. Ich trinke gern Kaffee und lese ein Buch, weil ich dort gut entspannen kann."
+  },
+
+  {
+    "id": "b1-experience-002",
+    "type": "word_count",
+    "level": "B1",
+    "category": "narrative",
+    "instructions": "Schreibe 90–110 Wörter über einen Tag, an dem du eine positive Überraschung erlebt hast.",
+    "minWords": 90,
+    "maxWords": 110,
+    "targetLanguage": ["zuerst", "dann", "plötzlich", "später", "am Ende"],
+    "rubric": {
+      "criteria": [
+        "Zeitliche Reihenfolge deutlich erkennbar.",
+        "Die Überraschung lebendig beschrieben.",
+        "Passende Verbindungswörter.",
+        "Wortzahl im Rahmen."
+      ]
+    },
+    "modelAnswer": "Zuerst war der Tag ganz normal: Ich bin früh aufgestanden und zur Arbeit gegangen. Dann hat mein Chef plötzlich gesagt, dass wir eine kurze Pause machen. Plötzlich kam eine Kollegin mit einem Kuchen, weil ich Geburtstag hatte. Später haben wir zusammen Kaffee getrunken. Am Ende war ich sehr überrascht und glücklich über die kleine Feier."
+  },
+
+  {
+    "id": "b2-argument-002",
+    "type": "word_count",
+    "level": "B2",
+    "category": "balanced_argument",
+    "instructions": "Schreibe 150–180 Wörter zum Thema: „Sollten Smartphones im Unterricht erlaubt sein?“",
+    "minWords": 150,
+    "maxWords": 180,
+    "targetLanguage": ["einerseits", "andererseits", "dennoch", "außerdem", "abschließend"],
+    "rubric": {
+      "criteria": [
+        "Argumente für und gegen klar dargestellt.",
+        "Eigene Position im Text deutlich erkennbar.",
+        "Guter Einsatz von Verbindungswörtern zur Strukturierung.",
+        "Sachliche und reflektierte Sprache."
+      ]
+    },
+    "modelAnswer": "Einerseits können Smartphones im Unterricht sehr nützlich sein, weil man schnell Informationen suchen oder Lern-Apps benutzen kann. Außerdem können Schüler damit digitale Materialien speichern. Andererseits besteht die Gefahr, dass sie sich ablenken lassen und Nachrichten schreiben. Dennoch kann ein sinnvoller Einsatz mit klaren Regeln funktionieren. Abschließend finde ich, dass Smartphones im Unterricht erlaubt sein sollten, wenn der Lehrer den Einsatz gezielt steuert."
+  },
+
+  {
+    "id": "a2-invite-reply-002",
+    "type": "letter_reply",
+    "level": "A2",
+    "category": "informal_invitation",
+    "incomingText": "Hi, wir machen am Samstag ein kleines Picknick im Park. Hast du Lust und Zeit?",
+    "instructions": "Antworte in einer Nachricht (35–50 Wörter).",
+    "bulletPoints": [
+      "Sag, ob du Zeit und Lust hast.",
+      "Erwähne kurz, was du mitbringst oder was du machst.",
+      "Mach einen freundlichen Kommentar zum Treffen."
+    ],
+    "minWords": 35,
+    "maxWords": 50,
+    "targetLanguage": ["Samstag", "gern", "Freunde", "später"],
+    "rubric": {
+      "criteria": [
+        "Alle Fragen beantwortet.",
+        "Natürlicher, freundlicher Ton.",
+        "Einfacher, klarer Stil."
+      ]
+    },
+    "modelAnswer": "Hi, ich habe am Samstag Zeit und komme gern zum Picknick. Ich bringe etwas Obst und Wasser mit. Ich freue mich darauf, euch alle im Park zu sehen."
+  },
+
+  {
+    "id": "b1-course-email-002",
+    "type": "letter_reply",
+    "level": "B1",
+    "category": "semi_formal_email",
+    "incomingText": "Sehr geehrte Teilnehmerin, sehr geehrter Teilnehmer, wir möchten Sie bitten, Feedback zu Ihrem aktuellen Deutschkurs zu geben.",
+    "instructions": "Schreibe eine kurze E-Mail (80–100 Wörter) mit deinem Feedback.",
+    "bulletPoints": [
+      "Bedanke dich für die Anfrage.",
+      "Nenne mindestens einen positiven Punkt.",
+      "Nenne mindestens einen Punkt, den man verbessern kann."
+    ],
+    "minWords": 80,
+    "maxWords": 100,
+    "targetLanguage": ["Kurs", "Lernziel", "Struktur", "Atmosphäre"],
+    "rubric": {
+      "criteria": [
+        "Höfliche Form und klare Struktur.",
+        "Konkretes positives Feedback.",
+        "Konkreter Verbesserungsvorschlag."
+      ]
+    },
+    "modelAnswer": "Sehr geehrte Damen und Herren, vielen Dank für Ihre Anfrage zum Feedback. Mir gefällt besonders die freundliche Atmosphäre im Kurs und die klare Struktur der Stunden. Manchmal könnten wir jedoch mehr Zeit für freies Sprechen haben, damit wir unsere Lernziele besser erreichen. Insgesamt bin ich sehr zufrieden mit dem Kurs."
+  },
+
+  {
+    "id": "b2-workplace-email-002",
+    "type": "letter_reply",
+    "level": "B2",
+    "category": "workplace_update",
+    "incomingText": "Ihre Chefin bittet Sie um einen kurzen Bericht zur Zusammenarbeit im Team.",
+    "instructions": "Schreiben Sie eine formelle E-Mail (130–160 Wörter).",
+    "bulletPoints": [
+      "Beschreiben Sie kurz die aktuelle Stimmung im Team.",
+      "Nennen Sie mindestens ein positives Beispiel für gute Zusammenarbeit.",
+      "Nennen Sie ein Problem und schlagen Sie eine Maßnahme vor."
+    ],
+    "minWords": 130,
+    "maxWords": 160,
+    "targetLanguage": ["Atmosphäre", "Kooperation", "Konflikt", "Maßnahme"],
+    "rubric": {
+      "criteria": [
+        "Sachliche und differenzierte Beschreibung.",
+        "Konkrete Beispiele und Vorschläge.",
+        "Angemessen formeller Stil."
+      ]
+    },
+    "modelAnswer": "Sehr geehrte Frau Schmidt, die aktuelle Atmosphäre im Team ist im Allgemeinen positiv. Wir arbeiten kooperativ und unterstützen uns gegenseitig, besonders bei größeren Projekten. Ein gutes Beispiel ist die letzte Präsentation, bei der alle Kollegen aktiv geholfen haben. Allerdings gibt es manchmal Konflikte bei der Aufgabenverteilung. Als Maßnahme schlage ich vor, regelmäßige kurze Team-Meetings zu planen, in denen die Aufgaben klar verteilt und Rückfragen früh geklärt werden. Mit freundlichen Grüßen, ..."
+  },
+
+  {
+    "id": "a1-mcq-time-002",
+    "type": "mcq",
+    "level": "A1",
+    "category": "temporal_adverbs",
+    "instructions": "Wähle das passende Zeitwort.",
+    "questions": [
+      {
+        "prompt": "Ich arbeite ___ im Büro.",
+        "options": ["heute", "dort", "gern"],
+        "correctIndex": 0,
+        "explanation": "„heute im Büro“ ist eine passende Zeitangabe."
+      },
+      {
+        "prompt": "Wir treffen uns ___ im Café.",
+        "options": ["morgen", "langsam", "draußen"],
+        "correctIndex": 0,
+        "explanation": "„morgen im Café“ passt zur Zeit des Treffens."
+      }
+    ]
+  },
+
+  {
+    "id": "a2-mcq-order-002",
+    "type": "mcq",
+    "level": "A2",
+    "category": "word_order",
+    "instructions": "Wähle den Satz mit natürlicher Wortstellung.",
+    "questions": [
+      {
+        "prompt": "Welcher Satz ist richtig?",
+        "options": [
+          "Morgens ich trinke Kaffee.",
+          "Morgens trinke ich Kaffee.",
+          "Ich trinke morgens Kaffee gern."
+        ],
+        "correctIndex": 1,
+        "explanation": "„Morgens trinke ich Kaffee.“ hat die richtige Verbposition."
+      },
+      {
+        "prompt": "Welcher Satz klingt natürlich?",
+        "options": [
+          "Oft ich lerne abends Deutsch.",
+          "Ich lerne abends oft Deutsch.",
+          "Deutsch lerne ich oft abends."
+        ],
+        "correctIndex": 1,
+        "explanation": "„Ich lerne abends oft Deutsch.“ ist die natürliche Variante."
+      }
+    ]
+  },
+
+  {
+    "id": "b1-mcq-register-002",
+    "type": "mcq",
+    "level": "B1",
+    "category": "register_choice",
+    "instructions": "Wähle die passende Form für eine Nachricht an deinen Chef.",
+    "questions": [
+      {
+        "prompt": "Wie beginnst du die Nachricht?",
+        "options": [
+          "Hallo Chef,",
+          "Sehr geehrter Herr Meier,",
+          "Ey Meier,",
+          "Hi Boss,"
+        ],
+        "correctIndex": 1,
+        "explanation": "„Sehr geehrter Herr Meier,“ ist passend und höflich."
+      },
+      {
+        "prompt": "Wie beendest du die Nachricht?",
+        "options": [
+          "Viele Grüße,",
+          "LG,",
+          "Danke dir,",
+          "Bis später,"
+        ],
+        "correctIndex": 0,
+        "explanation": "„Viele Grüße,“ ist eine neutrale, höfliche Schlussformel."
+      }
+    ]
+  }
+]
